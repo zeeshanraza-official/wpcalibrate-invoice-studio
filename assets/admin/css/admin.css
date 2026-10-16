@@ -1,0 +1,1216 @@
+/* WPCalibrate Invoice Studio - Executive Admin Design System */
+
+:root {
+    --wpci-navy-900: #0a192f;
+    --wpci-navy-800: #0f274a;
+    --wpci-navy-700: #1e3a8a;
+    --wpci-blue-600: #2563eb;
+    --wpci-blue-500: #3b82f6;
+    --wpci-blue-50: #eff6ff;
+
+    --wpci-slate-900: #0f172a;
+    --wpci-slate-800: #1e293b;
+    --wpci-slate-700: #334155;
+    --wpci-slate-600: #475569;
+    --wpci-slate-500: #64748b;
+    --wpci-slate-400: #94a3b8;
+    --wpci-slate-200: #e2e8f0;
+    --wpci-slate-100: #f1f5f9;
+    --wpci-slate-50: #f8fafc;
+
+    --wpci-emerald-600: #059669;
+    --wpci-emerald-500: #10b981;
+    --wpci-emerald-50: #ecfdf5;
+
+    --wpci-amber-600: #d97706;
+    --wpci-amber-500: #f59e0b;
+    --wpci-amber-50: #fffbeb;
+
+    --wpci-rose-600: #e11d48;
+    --wpci-rose-500: #f43f5e;
+    --wpci-rose-50: #fff1f2;
+
+    --wpci-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --wpci-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --wpci-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    --wpci-shadow-modal: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+
+    --wpci-radius-sm: 6px;
+    --wpci-radius-md: 10px;
+    --wpci-radius-lg: 14px;
+    --wpci-radius-full: 9999px;
+
+    --wpci-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Wrapper */
+.wpci-wrap {
+    margin: 20px 20px 40px 2px;
+    max-width: 1320px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--wpci-slate-800);
+}
+
+/* Executive Header */
+.wpci-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #0f274a 0%, #1e3a8a 60%, #1d4ed8 100%);
+    border-radius: var(--wpci-radius-lg);
+    padding: 22px 28px;
+    margin-bottom: 24px;
+    box-shadow: var(--wpci-shadow-md);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.wpci-header::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.wpci-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 1;
+}
+
+.wpci-brand-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--wpci-radius-md);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.wpci-brand-badge img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.wpci-header-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wpci-version-tag {
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: var(--wpci-radius-full);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.wpci-header-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+.wpci-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.wpci-header-right .button,
+.wpci-header .button,
+.wpci-header a.button {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    padding: 7px 18px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+.wpci-header-right .button:hover,
+.wpci-header .button:hover,
+.wpci-header a.button:hover {
+    background: #f8fafc !important;
+    color: #1d4ed8 !important;
+    border-color: #f8fafc !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+.wpci-header-right .button .dashicons,
+.wpci-header .button .dashicons {
+    color: #2563eb !important;
+    font-size: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.wpci-header-right .button:hover .dashicons,
+.wpci-header .button:hover .dashicons {
+    color: #1d4ed8 !important;
+}
+
+/* KPI / Metric Summary Cards Strip */
+.wpci-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+    .wpci-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .wpci-kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wpci-kpi-card {
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 18px 20px;
+    box-shadow: var(--wpci-shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: var(--wpci-transition);
+}
+
+.wpci-kpi-card:hover {
+    box-shadow: var(--wpci-shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--wpci-slate-400);
+}
+
+.wpci-kpi-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--wpci-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.wpci-kpi-blue .wpci-kpi-icon { background: var(--wpci-blue-50); color: var(--wpci-blue-600); }
+.wpci-kpi-green .wpci-kpi-icon { background: var(--wpci-emerald-50); color: var(--wpci-emerald-600); }
+.wpci-kpi-amber .wpci-kpi-icon { background: var(--wpci-amber-50); color: var(--wpci-amber-600); }
+.wpci-kpi-slate .wpci-kpi-icon { background: var(--wpci-slate-100); color: var(--wpci-slate-600); }
+
+.wpci-kpi-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.wpci-kpi-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--wpci-slate-500);
+}
+
+.wpci-kpi-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--wpci-slate-900);
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+.wpci-kpi-sub {
+    font-size: 12px;
+    color: var(--wpci-slate-500);
+    margin-top: 2px;
+}
+
+/* Modern Pill Filters & Search Toolbar */
+.wpci-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    padding: 10px 14px;
+    border-radius: var(--wpci-radius-md);
+    box-shadow: var(--wpci-shadow-sm);
+}
+
+.wpci-pill-nav {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.wpci-pill-nav li {
+    margin: 0;
+}
+
+.wpci-pill-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: var(--wpci-radius-full);
+    background: var(--wpci-slate-50);
+    border: 1px solid var(--wpci-slate-200);
+    color: var(--wpci-slate-700);
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: var(--wpci-transition);
+}
+
+.wpci-pill-count {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: var(--wpci-radius-full);
+    font-size: 11px;
+    background: rgba(0, 0, 0, 0.06);
+    color: inherit;
+}
+
+.wpci-pill-nav a:hover {
+    background: var(--wpci-slate-100);
+    color: var(--wpci-navy-900);
+    border-color: var(--wpci-slate-400);
+}
+
+.wpci-pill-nav a.active {
+    background: var(--wpci-navy-700);
+    color: #ffffff;
+    border-color: var(--wpci-navy-700);
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.25);
+}
+
+.wpci-pill-nav a.active .wpci-pill-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.wpci-search-form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.wpci-search-box-group {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff !important;
+    border: 1.5px solid #94a3b8 !important;
+    border-radius: 8px !important;
+    padding: 2px 4px 2px 12px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+.wpci-search-box-group:focus-within {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+}
+
+.wpci-search-input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    font-size: 13.5px !important;
+    color: #0f172a !important;
+    width: 210px !important;
+    min-height: 32px !important;
+    padding: 4px 6px 4px 0 !important;
+}
+
+.wpci-search-input:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.wpci-search-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: background 0.15s ease-in-out, transform 0.15s ease-in-out !important;
+}
+
+.wpci-search-btn:hover {
+    background: #1d4ed8 !important;
+    transform: scale(1.05);
+}
+
+.wpci-search-btn .dashicons {
+    font-size: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Elevated Table Card */
+.wpci-table-card {
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    overflow: hidden;
+    box-shadow: var(--wpci-shadow-sm);
+    margin-bottom: 24px;
+}
+
+.wpci-table-card .wp-list-table {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+.wpci-table-card .wp-list-table thead th {
+    background: var(--wpci-slate-50);
+    color: var(--wpci-slate-600);
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--wpci-slate-200);
+}
+
+.wpci-table-card .wp-list-table tbody tr {
+    transition: var(--wpci-transition);
+}
+
+.wpci-table-card .wp-list-table tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+
+.wpci-table-card .wp-list-table td {
+    padding: 12px 14px;
+    vertical-align: middle;
+    font-size: 13px;
+    border-bottom: 1px solid var(--wpci-slate-100);
+}
+
+/* Status Badges */
+.wpci-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: var(--wpci-radius-full);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.wpci-status-badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.wpci-badge-draft { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+.wpci-badge-draft::before { background: #64748b; }
+
+.wpci-badge-issued { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; }
+.wpci-badge-issued::before { background: #0284c7; }
+
+.wpci-badge-sent { background: #ede9fe; color: #7c3aed; border: 1px solid #ddd6fe; }
+.wpci-badge-sent::before { background: #7c3aed; }
+
+.wpci-badge-partially-paid { background: #fef3c7; color: #d97706; border: 1px solid #fde68a; }
+.wpci-badge-partially-paid::before { background: #d97706; }
+
+.wpci-badge-paid { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; }
+.wpci-badge-paid::before { background: #16a34a; }
+
+.wpci-badge-overdue { background: #fee2e2; color: #dc2626; border: 1px solid #fecaca; }
+.wpci-badge-overdue::before { background: #dc2626; }
+
+.wpci-badge-cancelled { background: #f3f4f6; color: #9ca3af; text-decoration: line-through; border: 1px solid #e5e7eb; }
+.wpci-badge-cancelled::before { background: #9ca3af; }
+
+/* Action Buttons in Table */
+.wpci-action-btn-group {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    background: #f8fafc !important;
+    padding: 3px 6px !important;
+    border-radius: 6px !important;
+    border: 1.5px solid #cbd5e1 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.wpci-action-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 4px !important;
+    color: #475569 !important;
+    text-decoration: none !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+.wpci-action-btn:hover {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3) !important;
+}
+
+.wpci-action-btn.btn-pay:hover { background: #16a34a !important; border-color: #16a34a !important; color: #ffffff !important; }
+.wpci-action-btn.btn-cancel:hover { background: #dc2626 !important; border-color: #dc2626 !important; color: #ffffff !important; }
+.wpci-action-btn.btn-delete:hover { background: #991b1b !important; border-color: #991b1b !important; color: #ffffff !important; }
+
+.wpci-action-btn .dashicons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    color: inherit !important;
+}
+
+/* Editor Form 2-Column Layout */
+.wpci-editor-container {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .wpci-editor-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wpci-card {
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 22px 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--wpci-shadow-sm);
+}
+
+.wpci-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--wpci-slate-900);
+    margin: 0 0 18px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--wpci-slate-100);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpci-card-title .dashicons {
+    color: var(--wpci-navy-700);
+}
+
+.wpci-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+    .wpci-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wpci-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.wpci-form-group label {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #1e293b !important;
+    margin-bottom: 7px !important;
+    display: block !important;
+}
+
+.wpci-wrap input[type="text"],
+.wpci-wrap input[type="email"],
+.wpci-wrap input[type="url"],
+.wpci-wrap input[type="number"],
+.wpci-wrap input[type="date"],
+.wpci-wrap input[type="password"],
+.wpci-wrap select,
+.wpci-wrap textarea,
+.wpci-form-group input,
+.wpci-form-group select,
+.wpci-form-group textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 40px !important;
+    padding: 8px 12px !important;
+    border: 1.5px solid #94a3b8 !important;
+    border-radius: 6px !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    color: #0f172a !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.wpci-wrap select,
+.wpci-form-group select {
+    appearance: auto !important;
+    -webkit-appearance: auto !important;
+    cursor: pointer !important;
+    background-color: #ffffff !important;
+}
+
+.wpci-wrap input:focus,
+.wpci-wrap select:focus,
+.wpci-wrap textarea:focus,
+.wpci-form-group input:focus,
+.wpci-form-group select:focus,
+.wpci-form-group textarea:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+    outline: none !important;
+    background-color: #ffffff !important;
+}
+
+.wpci-form-group .description {
+    font-size: 12px !important;
+    color: #64748b !important;
+    margin-top: 6px !important;
+    line-height: 1.45 !important;
+    display: block !important;
+}
+
+/* Line Items Editor Table */
+.wpci-items-editor-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 16px;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-sm);
+    overflow: hidden;
+}
+
+.wpci-items-editor-table th {
+    background: var(--wpci-slate-50);
+    padding: 10px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--wpci-slate-600);
+    border-bottom: 1px solid var(--wpci-slate-200);
+    text-align: left;
+}
+
+.wpci-items-editor-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--wpci-slate-100);
+    vertical-align: middle;
+}
+
+.wpci-items-editor-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.wpci-items-editor-table input[type="text"],
+.wpci-items-editor-table input[type="number"],
+.wpci-items-editor-table input {
+    border: 1.5px solid #94a3b8 !important;
+    background: #ffffff !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+    color: #0f172a !important;
+    min-height: 36px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.wpci-items-editor-table input:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2) !important;
+    outline: none !important;
+}
+
+.wpci-row-actions-btn {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--wpci-radius-sm);
+    background: var(--wpci-rose-50);
+    color: var(--wpci-rose-600);
+    border: 1px solid #fecaca;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--wpci-transition);
+}
+
+.wpci-row-actions-btn:hover {
+    background: var(--wpci-rose-600);
+    color: #ffffff;
+    border-color: var(--wpci-rose-600);
+}
+
+/* Totals Summary Card */
+.wpci-totals-card {
+    background: var(--wpci-slate-50);
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.wpci-summary-table {
+    width: 100%;
+}
+
+.wpci-summary-table th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 12.5px;
+    color: var(--wpci-slate-600);
+    padding: 6px 0;
+}
+
+.wpci-summary-table td {
+    text-align: right;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--wpci-slate-800);
+    padding: 6px 0;
+}
+
+.wpci-summary-total {
+    border-top: 2px solid var(--wpci-slate-300);
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    color: var(--wpci-navy-700) !important;
+    padding-top: 10px !important;
+}
+
+.wpci-summary-due {
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    color: var(--wpci-rose-600) !important;
+    padding-top: 6px !important;
+}
+
+/* Modern Settings Tabs Navigation */
+.wpci-tabs-nav-wrapper {
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 6px;
+    margin-bottom: 24px;
+    box-shadow: var(--wpci-shadow-sm);
+}
+
+.wpci-tabs-nav {
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.wpci-tab-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wpci-slate-600);
+    text-decoration: none;
+    border-radius: var(--wpci-radius-sm);
+    transition: var(--wpci-transition);
+}
+
+.wpci-tab-link .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+}
+
+.wpci-tab-link:hover {
+    color: var(--wpci-navy-900);
+    background: var(--wpci-slate-100);
+}
+
+.wpci-tab-link.active {
+    background: var(--wpci-navy-700);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+}
+
+.wpci-tab-link.active .dashicons {
+    color: #ffffff;
+}
+
+/* Sticky Action Save Bar */
+.wpci-save-bar {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--wpci-slate-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Template Cards Grid in Settings */
+.wpci-template-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 12px 0 20px 0;
+}
+
+@media (max-width: 768px) {
+    .wpci-template-picker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wpci-template-choice-card {
+    border: 2px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 16px;
+    cursor: pointer;
+    background: #ffffff;
+    transition: var(--wpci-transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.wpci-template-choice-card:hover {
+    border-color: var(--wpci-blue-500);
+    box-shadow: var(--wpci-shadow-sm);
+}
+
+.wpci-template-choice-card.selected {
+    border-color: var(--wpci-navy-700);
+    background: #f8fafc;
+    box-shadow: 0 0 0 1px var(--wpci-navy-700);
+}
+
+.wpci-template-choice-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--wpci-blue-600);
+    background: var(--wpci-blue-50);
+    padding: 2px 8px;
+    border-radius: var(--wpci-radius-full);
+}
+
+/* Overview Tab Components */
+.wpci-overview-hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    border: 1px solid #e0e7ff;
+    border-radius: var(--wpci-radius-md);
+    padding: 26px 30px;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.wpci-overview-hero h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--wpci-navy-900);
+    margin: 0 0 8px 0;
+}
+
+.wpci-overview-hero p {
+    font-size: 14px;
+    color: var(--wpci-slate-600);
+    margin: 0;
+    max-width: 720px;
+    line-height: 1.6;
+}
+
+.wpci-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 1024px) {
+    .wpci-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .wpci-steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wpci-step-card {
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 20px;
+    position: relative;
+    box-shadow: var(--wpci-shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.wpci-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--wpci-navy-700);
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.wpci-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--wpci-slate-900);
+    margin-bottom: 6px;
+}
+
+.wpci-step-desc {
+    font-size: 12.5px;
+    color: var(--wpci-slate-500);
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.wpci-feature-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+    .wpci-feature-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wpci-highlight-box {
+    background: #ffffff;
+    border: 1px solid var(--wpci-slate-200);
+    border-radius: var(--wpci-radius-md);
+    padding: 20px;
+    box-shadow: var(--wpci-shadow-sm);
+}
+
+.wpci-highlight-box h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--wpci-navy-800);
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpci-highlight-box p {
+    font-size: 13px;
+    color: var(--wpci-slate-600);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Quick Actions Shortcut Bar */
+.wpci-shortcuts-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--wpci-slate-200);
+}
+
+/* Modal Popup Styles */
+.wpci-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 100050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--wpci-transition);
+}
+
+.wpci-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wpci-modal-dialog {
+    background: #ffffff;
+    border-radius: var(--wpci-radius-lg);
+    box-shadow: var(--wpci-shadow-modal);
+    width: 92%;
+    max-width: 960px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.96);
+    transition: var(--wpci-transition);
+}
+
+.wpci-modal-backdrop.active .wpci-modal-dialog {
+    transform: scale(1);
+}
+
+.wpci-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: var(--wpci-slate-900);
+    color: #ffffff;
+}
+
+.wpci-modal-header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.wpci-modal-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.wpci-modal-template-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 4px;
+    border-radius: var(--wpci-radius-sm);
+}
+
+.wpci-modal-template-selector button {
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    padding: 4px 10px;
+    font-size: 11.5px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--wpci-transition);
+}
+
+.wpci-modal-template-selector button:hover {
+    color: #ffffff;
+}
+
+.wpci-modal-template-selector button.active {
+    background: var(--wpci-blue-600);
+    color: #ffffff;
+}
+
+.wpci-modal-close-btn {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: var(--wpci-transition);
+}
+
+.wpci-modal-close-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wpci-modal-body {
+    flex-grow: 1;
+    background: #f1f5f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.wpci-modal-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    background: #ffffff;
+}
+
+.wpci-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: #ffffff;
+    border-top: 1px solid var(--wpci-slate-200);
+}
+
+/* Support Card in Settings */
+.wpci-support-card {
+    background: linear-gradient(135deg, #0f274a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    border-radius: var(--wpci-radius-md);
+    padding: 24px 28px;
+    margin-top: 24px;
+    box-shadow: var(--wpci-shadow-sm);
+}
+
+.wpci-support-card h3 {
+    color: #ffffff !important;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.wpci-support-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.wpci-support-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #22c55e;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: var(--wpci-radius-sm);
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+    transition: var(--wpci-transition);
+}
+
+.wpci-support-btn:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+}

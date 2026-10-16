@@ -1,0 +1,338 @@
+/* Classic Invoice Stylesheet */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.wpci-invoice-body {
+    background-color: #f7f9fa;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #2c3338;
+    line-height: 1.5;
+    font-size: 13px;
+    padding: 20px;
+}
+
+body.wpci-context-pdf {
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.wpci-invoice-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+body.wpci-context-pdf .wpci-invoice-wrap {
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wpci-header-table {
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--wpci-primary, #2b4c7e);
+    padding-bottom: 20px;
+}
+
+.wpci-header-table td {
+    vertical-align: top;
+}
+
+.wpci-header-brand {
+    width: 60%;
+}
+
+.wpci-logo {
+    max-width: 180px;
+    max-height: 70px;
+    margin-bottom: 10px;
+}
+
+.wpci-business-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--wpci-primary, #2b4c7e);
+    margin-bottom: 5px;
+}
+
+.wpci-trading-name {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.wpci-business-details {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.wpci-header-meta {
+    width: 40%;
+    text-align: right;
+}
+
+html[dir="rtl"] .wpci-header-meta {
+    text-align: left;
+}
+
+.wpci-invoice-heading {
+    font-size: 28px;
+    color: var(--wpci-primary, #2b4c7e);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.wpci-meta-table {
+    width: 100%;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .wpci-meta-table {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.wpci-meta-table th {
+    text-align: right;
+    padding: 3px 8px;
+    color: #64748b;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+html[dir="rtl"] .wpci-meta-table th {
+    text-align: left;
+}
+
+.wpci-meta-table td {
+    text-align: right;
+    padding: 3px 0 3px 8px;
+    font-size: 12px;
+}
+
+html[dir="rtl"] .wpci-meta-table td {
+    text-align: left;
+    padding: 3px 8px 3px 0;
+}
+
+/* Status Badges */
+.wpci-status-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.wpci-badge-draft { background: #f1f5f9; color: #475569; }
+.wpci-badge-issued { background: #e0f2fe; color: #0369a1; }
+.wpci-badge-sent { background: #ede9fe; color: #6d28d9; }
+.wpci-badge-partially-paid { background: #fef3c7; color: #b45309; }
+.wpci-badge-paid { background: #dcfce7; color: #15803d; }
+.wpci-badge-overdue { background: #fee2e2; color: #b91c1c; }
+.wpci-badge-cancelled { background: #f3f4f6; color: #6b7280; text-decoration: line-through; }
+
+/* Parties */
+.wpci-parties-table {
+    margin-bottom: 25px;
+}
+
+.wpci-section-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    color: var(--wpci-primary, #2b4c7e);
+    margin-bottom: 6px;
+}
+
+.wpci-party-content {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.45;
+}
+
+/* Items Table */
+.wpci-items-table {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.wpci-items-table thead {
+    display: table-header-group;
+}
+
+.wpci-items-table tr {
+    page-break-inside: avoid;
+}
+
+.wpci-items-table th {
+    background: var(--wpci-primary, #2b4c7e);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    text-align: left;
+}
+
+html[dir="rtl"] .wpci-items-table th {
+    text-align: right;
+}
+
+.wpci-items-table th.col-qty,
+.wpci-items-table th.col-price,
+.wpci-items-table th.col-tax,
+.wpci-items-table th.col-total {
+    text-align: right;
+}
+
+html[dir="rtl"] .wpci-items-table th.col-qty,
+html[dir="rtl"] .wpci-items-table th.col-price,
+html[dir="rtl"] .wpci-items-table th.col-tax,
+html[dir="rtl"] .wpci-items-table th.col-total {
+    text-align: left;
+}
+
+.wpci-items-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.wpci-items-table td.col-qty,
+.wpci-items-table td.col-price,
+.wpci-items-table td.col-tax,
+.wpci-items-table td.col-total {
+    text-align: right;
+}
+
+html[dir="rtl"] .wpci-items-table td.col-qty,
+html[dir="rtl"] .wpci-items-table td.col-price,
+html[dir="rtl"] .wpci-items-table td.col-tax,
+html[dir="rtl"] .wpci-items-table td.col-total {
+    text-align: left;
+}
+
+.wpci-items-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Bottom Grid */
+.wpci-bottom-grid {
+    display: table;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.wpci-notes-col {
+    display: table-cell;
+    width: 55%;
+    vertical-align: top;
+    padding-right: 20px;
+}
+
+html[dir="rtl"] .wpci-notes-col {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+.wpci-totals-col {
+    display: table-cell;
+    width: 45%;
+    vertical-align: top;
+}
+
+.wpci-block {
+    margin-bottom: 15px;
+}
+
+.wpci-block-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--wpci-primary, #2b4c7e);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.wpci-block-body {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.wpci-totals-table th {
+    text-align: right;
+    padding: 6px 10px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+html[dir="rtl"] .wpci-totals-table th {
+    text-align: left;
+}
+
+.wpci-totals-table td {
+    text-align: right;
+    padding: 6px 0 6px 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+html[dir="rtl"] .wpci-totals-table td {
+    text-align: left;
+    padding: 6px 10px 6px 0;
+}
+
+.wpci-totals-table tr.wpci-grand-total th,
+.wpci-totals-table tr.wpci-grand-total td {
+    border-top: 2px solid var(--wpci-primary, #2b4c7e);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--wpci-primary, #2b4c7e);
+    padding-top: 8px;
+}
+
+.wpci-totals-table tr.wpci-amount-due th,
+.wpci-totals-table tr.wpci-amount-due td {
+    font-size: 13px;
+    font-weight: bold;
+    color: #b91c1c;
+}
+
+.wpci-footer-text {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+@media print {
+    body.wpci-invoice-body {
+        background: #ffffff;
+        padding: 0;
+    }
+    .wpci-invoice-wrap {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}

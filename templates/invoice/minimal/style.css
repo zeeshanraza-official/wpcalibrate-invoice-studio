@@ -1,0 +1,322 @@
+/* Minimal Invoice Stylesheet */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.wpci-invoice-body {
+    background-color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #111827;
+    line-height: 1.5;
+    font-size: 13px;
+    padding: 30px;
+}
+
+body.wpci-context-pdf {
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.wpci-invoice-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+}
+
+body.wpci-context-pdf .wpci-invoice-wrap {
+    padding: 10px;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wpci-header-table {
+    margin-bottom: 20px;
+}
+
+.wpci-header-table td {
+    vertical-align: top;
+}
+
+.wpci-header-left {
+    width: 50%;
+}
+
+.wpci-invoice-title {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #111827;
+}
+
+.wpci-invoice-sub {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.wpci-header-right {
+    width: 50%;
+    text-align: right;
+}
+
+html[dir="rtl"] .wpci-header-right {
+    text-align: left;
+}
+
+.wpci-logo {
+    max-width: 150px;
+    max-height: 55px;
+    margin-bottom: 6px;
+}
+
+.wpci-biz-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.wpci-biz-meta {
+    font-size: 12px;
+    color: #4b5563;
+    margin-top: 4px;
+}
+
+.wpci-rule {
+    border: none;
+    border-top: 1px solid #111827;
+    margin-bottom: 25px;
+}
+
+/* Meta Customer Row */
+.wpci-meta-customer-table {
+    margin-bottom: 30px;
+}
+
+.wpci-meta-customer-table td {
+    vertical-align: top;
+}
+
+.wpci-cust-cell {
+    width: 55%;
+}
+
+.wpci-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.wpci-cust-info {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #1f2937;
+}
+
+.wpci-dates-cell {
+    width: 45%;
+}
+
+.wpci-compact-meta {
+    width: 100%;
+}
+
+.wpci-compact-meta th {
+    text-align: right;
+    padding: 3px 6px;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+html[dir="rtl"] .wpci-compact-meta th {
+    text-align: left;
+}
+
+.wpci-compact-meta td {
+    text-align: right;
+    padding: 3px 0 3px 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+html[dir="rtl"] .wpci-compact-meta td {
+    text-align: left;
+    padding: 3px 6px 3px 0;
+}
+
+.wpci-status-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border: 1px solid #111827;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Items Table */
+.wpci-items-table {
+    margin-bottom: 30px;
+}
+
+.wpci-items-table thead {
+    display: table-header-group;
+}
+
+.wpci-items-table tr {
+    page-break-inside: avoid;
+}
+
+.wpci-items-table th {
+    border-top: 1px solid #111827;
+    border-bottom: 1px solid #111827;
+    padding: 8px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+html[dir="rtl"] .wpci-items-table th {
+    text-align: right;
+}
+
+.wpci-items-table th.col-qty,
+.wpci-items-table th.col-price,
+.wpci-items-table th.col-tax,
+.wpci-items-table th.col-total {
+    text-align: right;
+}
+
+html[dir="rtl"] .wpci-items-table th.col-qty,
+html[dir="rtl"] .wpci-items-table th.col-price,
+html[dir="rtl"] .wpci-items-table th.col-tax,
+html[dir="rtl"] .wpci-items-table th.col-total {
+    text-align: left;
+}
+
+.wpci-items-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 12px;
+}
+
+.wpci-items-table td.col-qty,
+.wpci-items-table td.col-price,
+.wpci-items-table td.col-tax,
+.wpci-items-table td.col-total {
+    text-align: right;
+}
+
+html[dir="rtl"] .wpci-items-table td.col-qty,
+html[dir="rtl"] .wpci-items-table td.col-price,
+html[dir="rtl"] .wpci-items-table td.col-tax,
+html[dir="rtl"] .wpci-items-table td.col-total {
+    text-align: left;
+}
+
+/* Bottom Wrapper */
+.wpci-bottom-wrapper {
+    display: table;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.wpci-left-notes {
+    display: table-cell;
+    width: 55%;
+    vertical-align: top;
+    padding-right: 25px;
+}
+
+html[dir="rtl"] .wpci-left-notes {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+.wpci-right-totals {
+    display: table-cell;
+    width: 45%;
+    vertical-align: top;
+}
+
+.wpci-instruction-box {
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+.wpci-instruction-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.wpci-totals-table th {
+    text-align: right;
+    padding: 4px 8px;
+    font-weight: normal;
+    color: #4b5563;
+    font-size: 12px;
+}
+
+html[dir="rtl"] .wpci-totals-table th {
+    text-align: left;
+}
+
+.wpci-totals-table td {
+    text-align: right;
+    padding: 4px 0 4px 8px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #111827;
+}
+
+html[dir="rtl"] .wpci-totals-table td {
+    text-align: left;
+    padding: 4px 8px 4px 0;
+}
+
+.wpci-final-total th,
+.wpci-final-total td {
+    border-top: 1px solid #111827;
+    font-size: 14px;
+    font-weight: 800;
+    color: #111827;
+    padding-top: 8px;
+}
+
+.wpci-final-due th,
+.wpci-final-due td {
+    font-size: 13px;
+    font-weight: 800;
+    color: #b91c1c;
+}
+
+.wpci-minimal-footer {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+@media print {
+    body.wpci-invoice-body {
+        background: #ffffff;
+        padding: 0;
+    }
+    .wpci-invoice-wrap {
+        padding: 0;
+    }
+}
